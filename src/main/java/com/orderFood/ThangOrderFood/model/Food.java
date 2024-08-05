@@ -27,11 +27,13 @@ public class Food {
     private Long price;
     @ManyToOne
     private Category foodCategory;
+
     @Column(length = 1000)
     @ElementCollection
     private List<String> images;
 
     private boolean available;
+
     @ManyToOne
     private Restaurant restaurant;
 
