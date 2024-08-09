@@ -49,7 +49,6 @@ public class AuthController {
         }
         User createdUser = new User();
         createdUser.setEmail(user.getEmail());
-
         createdUser.setPassword(passwordEncoder.encode(user.getPassword()));
         createdUser.setRole(user.getRole());
         createdUser.setFullName(user.getFullName());
@@ -67,6 +66,8 @@ public class AuthController {
         authResponse.setJwt(jwt);
         authResponse.setRole(savedUser.getRole());
         authResponse.setMessage("Register success");
+
+
 
         return new ResponseEntity<>(authResponse, HttpStatus.CREATED);
     }
@@ -87,6 +88,7 @@ public class AuthController {
         authResponse.setJwt(jwt);
         authResponse.setRole(USER_ROLE.valueOf(role));
         authResponse.setMessage("Register success");
+
 
 
         //String role=authorities.isEmpty()?null:authorities.iterator().next().getAuthority();
