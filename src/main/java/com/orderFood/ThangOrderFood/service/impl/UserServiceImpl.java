@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    UserRepository userRepository;
+   private UserRepository userRepository;
 
     @Autowired
     private JwtProvider jwtProvider;

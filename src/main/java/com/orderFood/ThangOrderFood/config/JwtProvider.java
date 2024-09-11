@@ -15,7 +15,7 @@ import java.util.Set;
 
 @Service
 public class JwtProvider {
-
+    //Khai báo khóa bí mật (SecretKey)
     private SecretKey key= Keys.hmacShaKeyFor(JwtConstant.SECRET_KEY.getBytes());
 
     public String generateToken(Authentication auth){
